@@ -165,11 +165,27 @@ public class Main extends PApplet {
 			image(Frame, 0, 0);
 
 			break;
+
+		case 5:
+			image(Confirm, 0, 0);
+			image(Frame, 0, 0);
+
 		}
 
 		fill(0);
 		text("X:" + mouseX + "Y:" + mouseY, mouseX, mouseY);
 
+		scroll();
+
+	}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+	public void scroll() {
 		switch (cars) {
 		case 1:
 
@@ -243,7 +259,6 @@ public class Main extends PApplet {
 			System.out.println("scroll" + py);
 			break;
 		}
-
 	}
 
 //////////////////////////////////////////////////////////////////////////////////////////////
@@ -324,9 +339,24 @@ public class Main extends PApplet {
 		case 4:
 			// BACK
 			if ((mouseX > 27 && mouseX < 54) && (mouseY > 67 && mouseY < 92)) {
-				pantalla=2;
+				pantalla = 2;
 				break;
 
+			}
+
+			// CONFIRM PURCHASE
+			if ((mouseX > 0 && mouseX < 375) && (mouseY > 728 && mouseY < 812)) {
+				pantalla = 5;
+				break;
+
+			}
+
+		case 5:
+
+			if ((mouseX > 144 && mouseX < 228) && (mouseY > 498 && mouseY < 589)) {
+				car=false;
+				pantalla = 2;
+				break;
 			}
 		}
 	}
@@ -352,8 +382,8 @@ public class Main extends PApplet {
 				cars = 1;
 				System.out.println("yes");
 			}
-			
-			//BUY
+
+			// BUY
 			if ((mouseX > 113 && mouseX < 264) && (mouseY > 640 && mouseY < 684)) {
 				pantalla = 4;
 				System.out.println("yes");
@@ -374,8 +404,8 @@ public class Main extends PApplet {
 				cars = 0;
 				System.out.println("yes");
 			}
-			
-			//BUY
+
+			// BUY
 			if ((mouseX > 113 && mouseX < 264) && (mouseY > 640 && mouseY < 684)) {
 				pantalla = 4;
 				System.out.println("yes");
@@ -396,8 +426,8 @@ public class Main extends PApplet {
 				cars = 3;
 				System.out.println("yes");
 			}
-			
-			//BUY
+
+			// BUY
 			if ((mouseX > 113 && mouseX < 264) && (mouseY > 640 && mouseY < 684)) {
 				pantalla = 4;
 				System.out.println("yes");
@@ -419,7 +449,7 @@ public class Main extends PApplet {
 				System.out.println("yes");
 			}
 
-			//BUY
+			// BUY
 			if ((mouseX > 113 && mouseX < 264) && (mouseY > 640 && mouseY < 684)) {
 				pantalla = 4;
 				System.out.println("yes");
@@ -440,8 +470,8 @@ public class Main extends PApplet {
 				cars = 5;
 				System.out.println("yes");
 			}
-			
-			//BUY
+
+			// BUY
 			if ((mouseX > 113 && mouseX < 264) && (mouseY > 640 && mouseY < 684)) {
 				pantalla = 4;
 				System.out.println("yes");
@@ -462,9 +492,8 @@ public class Main extends PApplet {
 				cars = 4;
 				System.out.println("yes");
 			}
-			
-			
-			//BUY
+
+			// BUY
 			if ((mouseX > 113 && mouseX < 264) && (mouseY > 640 && mouseY < 684)) {
 				pantalla = 4;
 				System.out.println("yes");
@@ -486,7 +515,7 @@ public class Main extends PApplet {
 				System.out.println("yes");
 			}
 
-			//BUY
+			// BUY
 			if ((mouseX > 113 && mouseX < 264) && (mouseY > 640 && mouseY < 684)) {
 				pantalla = 4;
 				System.out.println("yes");
@@ -508,7 +537,7 @@ public class Main extends PApplet {
 
 			}
 
-			//BUY
+			// BUY
 			if ((mouseX > 113 && mouseX < 264) && (mouseY > 640 && mouseY < 684)) {
 				pantalla = 4;
 				System.out.println("yes");
