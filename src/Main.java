@@ -34,6 +34,8 @@ public class Main extends PApplet {
 	int cars = 0;
 	boolean car = false;
 	int py = 0;
+	int hx = 0;
+	int hx2 = 0;
 
 	public static void main(String[] args) {
 		PApplet.main("Main");
@@ -107,6 +109,7 @@ public class Main extends PApplet {
 				case 1:
 					image(ModelS_1, 0, py);
 					image(MSBAR, 0, 0);
+					animation();
 					image(Frame, 0, 0);
 					break;
 
@@ -354,7 +357,7 @@ public class Main extends PApplet {
 		case 5:
 
 			if ((mouseX > 144 && mouseX < 228) && (mouseY > 498 && mouseY < 589)) {
-				car=false;
+				car = false;
 				pantalla = 2;
 				break;
 			}
@@ -546,6 +549,47 @@ public class Main extends PApplet {
 
 		}
 
+	}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+	public void animation() {
+
+		if (car == true) {
+
+			switch (cars) {
+
+			case 1:
+				if (hx < 100) {
+					hx += 4;
+				}
+			}
+		}
+
+		//First
+		noStroke();
+		fill(229, 96, 100);
+		rect(45, 375 + py, 100 + hx, 7);
+		fill(150);
+		rect(45, 387 + py, 30 + hx, 7);
+		
+		//Second
+		noStroke();
+		fill(229, 96,100);
+		rect(45, 536 + py, 50 + hx, 7);
+		fill(150);
+		rect(45, 548 + py, 1 + hx, 7);
+		
+		//Third
+		noStroke();
+		fill(229, 96, 100);
+		rect(45, 704 + py, 130 + hx, 7);
+		fill(150);
+		rect(45, 716 + py, 70 + hx, 7);
 	}
 
 }
