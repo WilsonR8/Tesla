@@ -35,7 +35,6 @@ public class Main extends PApplet {
 	boolean car = false;
 	int py = 0;
 	int hx = 0;
-	int hx2 = 0;
 
 	public static void main(String[] args) {
 		PApplet.main("Main");
@@ -123,6 +122,7 @@ public class Main extends PApplet {
 				case 3:
 					image(Model3_1, 0, py);
 					image(M3BAR, 0, 0);
+					animation();
 					image(Frame, 0, 0);
 					break;
 
@@ -136,6 +136,7 @@ public class Main extends PApplet {
 				case 5:
 					image(ModelX_1, 0, py);
 					image(MXBAR, 0, 0);
+					animation();
 					image(Frame, 0, 0);
 					break;
 
@@ -149,6 +150,7 @@ public class Main extends PApplet {
 				case 7:
 					image(ModelY_1, 0, py);
 					image(MYBAR, 0, 0);
+					animation();
 					image(Frame, 0, 0);
 					break;
 				}
@@ -399,12 +401,14 @@ public class Main extends PApplet {
 			// BACK
 			if ((mouseX > 27 && mouseX < 54) && (mouseY > 67 && mouseY < 92)) {
 				car = false;
+				hx = 0;
 
 			}
 
 			// COMPAREE
 			if ((mouseX > 310 && mouseX < 345) && (mouseY > 65 && mouseY < 97)) {
 				cars = 0;
+				hx = 0;
 				System.out.println("yes");
 			}
 
@@ -443,12 +447,14 @@ public class Main extends PApplet {
 			// BACK
 			if ((mouseX > 27 && mouseX < 54) && (mouseY > 67 && mouseY < 92)) {
 				car = false;
+				hx = 0;
 
 			}
 
 			// COMPAREE
 			if ((mouseX > 310 && mouseX < 345) && (mouseY > 65 && mouseY < 97)) {
 				cars = 2;
+				hx = 0;
 				System.out.println("yes");
 			}
 
@@ -487,12 +493,14 @@ public class Main extends PApplet {
 			// BACK
 			if ((mouseX > 27 && mouseX < 54) && (mouseY > 67 && mouseY < 92)) {
 				car = false;
+				hx = 0;
 
 			}
 
 			// COMPAREE
 			if ((mouseX > 310 && mouseX < 345) && (mouseY > 65 && mouseY < 97)) {
 				cars = 4;
+				hx = 0;
 				System.out.println("yes");
 			}
 
@@ -530,6 +538,7 @@ public class Main extends PApplet {
 			// BACK
 			if ((mouseX > 27 && mouseX < 54) && (mouseY > 67 && mouseY < 92)) {
 				car = false;
+				hx = 0;
 
 			}
 
@@ -537,6 +546,7 @@ public class Main extends PApplet {
 			if ((mouseX > 310 && mouseX < 345) && (mouseY > 65 && mouseY < 97)) {
 				cars = 6;
 				System.out.println("yes");
+				hx = 0;
 
 			}
 
@@ -565,26 +575,42 @@ public class Main extends PApplet {
 
 			case 1:
 				if (hx < 100) {
-					hx += 4;
+					hx += 1;
 				}
+
+			case 3:
+				if (hx < 100) {
+					hx += 1;
+				}
+
+			case 5:
+				if (hx < 100) {
+					hx += 1;
+				}
+
+			case 7:
+				if (hx < 100) {
+					hx += 1;
+				}
+
 			}
 		}
 
-		//First
+		// First
 		noStroke();
 		fill(229, 96, 100);
 		rect(45, 375 + py, 100 + hx, 7);
 		fill(150);
 		rect(45, 387 + py, 30 + hx, 7);
-		
-		//Second
+
+		// Second
 		noStroke();
-		fill(229, 96,100);
+		fill(229, 96, 100);
 		rect(45, 536 + py, 50 + hx, 7);
 		fill(150);
 		rect(45, 548 + py, 1 + hx, 7);
-		
-		//Third
+
+		// Third
 		noStroke();
 		fill(229, 96, 100);
 		rect(45, 704 + py, 130 + hx, 7);
